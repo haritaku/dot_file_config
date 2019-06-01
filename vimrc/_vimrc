@@ -1,1 +1,48 @@
-../../.vimrc
+" シンタックスハイライト（色分け）
+syntax on
+
+set title
+
+" 行の番号表示
+set number
+
+" 現在の行の強調
+set cursorline
+
+" 現在の行を強調表示（縦）
+set cursorcolumn
+
+" Tab文字を半角スペースに
+set expandtab
+
+" Tabの幅をスペース4個分に
+set tabstop=4
+
+" 行頭でのTabの幅をスペース4個分に
+set shiftwidth=4
+
+" コマンドラインの補完
+set wildmode=list:longest
+
+" コマンド補完
+set wildmenu
+
+" コマンドラインの補完
+set wildmode=list:longest
+
+" 保存時にsudo権限で保存 command : w!!
+cnoremap w!! w !sudo tee > /dev/null %<CR>
+
+" 検索時に大文字・小文字を区別する
+set ignorecase
+
+set background=dark
+let g:hybrid_custom_term_colors = 1
+let g:hybrid_reduced_contrast = 1
+colorscheme hybrid
+
+" 自動的に後ろのかぎ括弧をつける
+imap { {}<LEFT>
+imap [ []<LEFT>
+imap ( ()<LEFT>
+
