@@ -54,7 +54,7 @@ set termwinsize=7x0
 
 
 """""""""""""""
-"dein.vimの導入
+"dein.vimの設定
 """""""""""""""
 if &compatible
   set nocompatible
@@ -67,6 +67,10 @@ if dein#load_state('~/.cache/dein')
 
   call dein#add('~/.cache/dein/repos/github.com/Shougo/dein.vim')
   call dein#add('Shougo/deoplete.nvim')
+  
+  " NERDTreeの追加
+  call dein#add('scrooloose/nerdtree')
+
   if !has('nvim')
     call dein#add('roxma/nvim-yarp')
     call dein#add('roxma/vim-hug-neovim-rpc')
@@ -77,3 +81,9 @@ if dein#load_state('~/.cache/dein')
 endif
 
 filetype plugin indent on
+
+" NERDTreeをCtrl+Nで起動
+map <C-n> :NERDTreeToggle<CR>
+
+" ファイルを指定した場合は、NERDTreeを起動しない
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
