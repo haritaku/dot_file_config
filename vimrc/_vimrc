@@ -70,6 +70,9 @@ if dein#load_state('~/.cache/dein')
   
   " NERDTreeの追加
   call dein#add('scrooloose/nerdtree')
+  
+  " vim-gitgutterの追加
+  call dein#add('airblade/vim-gitgutter')
 
   if !has('nvim')
     call dein#add('roxma/nvim-yarp')
