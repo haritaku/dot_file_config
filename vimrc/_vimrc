@@ -46,3 +46,8 @@ imap { {}<LEFT>
 imap [ []<LEFT>
 imap ( ()<LEFT>
 
+" windowの下にterminalを開く
+set splitbelow
+
+" terminalサイズの指定
+set termwinsize=7x0
