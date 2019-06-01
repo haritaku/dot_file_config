@@ -77,6 +77,9 @@ if dein#load_state('~/.cache/dein')
   " vim-fugitiveの追加
   call dein#add('tpope/vim-fugitive')
 
+
+  call dein#add('davidhalter/jedi-vim')
+
   if !has('nvim')
     call dein#add('roxma/nvim-yarp')
     call dein#add('roxma/vim-hug-neovim-rpc')
@@ -93,3 +96,6 @@ map <C-n> :NERDTreeToggle<CR>
 
 " ファイルを指定した場合は、NERDTreeを起動しない
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+
+" jedi-vimでdocstringのポップアップ無効
+autocmd FileType python setlocal completeopt-=preview
