@@ -68,7 +68,6 @@ if dein#load_state('~/.cache/dein')
   call dein#add('~/.cache/dein/repos/github.com/Shougo/dein.vim')
   call dein#add('Shougo/deoplete.nvim')
 
-
   " jedi-vimの追加
   call dein#add('davidhalter/jedi-vim')
 
@@ -80,6 +79,9 @@ if dein#load_state('~/.cache/dein')
 
   " vim-fugitiveの追加
   call dein#add('tpope/vim-fugitive')
+
+
+  call dein#add('tell-k/vim-autopep8')
 
   if !has('nvim')
     call dein#add('roxma/nvim-yarp')
@@ -105,3 +107,6 @@ let g:jedi#popup_select_first = 0
 
 " .を入力すると補完される設定を無効
 let g:jedi#popup_on_dot = 0
+
+
+nnoremap <S-f> :call Autopep8()<CR>
