@@ -45,6 +45,8 @@ colorscheme hybrid
 imap { {}<LEFT>
 imap [ []<LEFT>
 imap ( ()<LEFT>
+inoremap " ""<LEFT>
+inoremap ' ''<LEFT>
 
 " windowの下にterminalを開く
 set splitbelow
