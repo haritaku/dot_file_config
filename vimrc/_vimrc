@@ -57,6 +57,11 @@ set splitbelow
 " terminalサイズの指定
 set termwinsize=7x0
 
+" エラー音の無効
+set visualbell t_vb=
+
+" ノーマルモードで改行を可能にする
+nnoremap <CR> i<Return><Esc>^k
 
 """""""""""""""
 "dein.vimの設定
